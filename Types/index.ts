@@ -5,6 +5,7 @@ export interface RecipeProps {
   vegetarian: boolean;
   veryPopular: true;
   cookingMinutes: string;
+  readyInMinutes: number;
   instructions: string;
   glutenFree: string;
 }
