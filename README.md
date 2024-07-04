@@ -30,9 +30,7 @@ To get started with the Next.js Recipe App, follow these steps:
     npm run dev
     ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-4. **Running the cypress tests**:
+4. **Run application locally**
  - Navigate to the root directory:
  - Install cypress:
      ```bash
