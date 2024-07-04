@@ -22,7 +22,7 @@ To get started with the Next.js Recipe App, follow these steps:
     .env
     ```
 - Spoonacular API:
-  - Add the api key to the `API_KEY` variable in the `.env` file
+  - Add the api key to the `FOOD_APP_API_KEY` variable in the `.env` file
 
 3. **Running the Frontend**:
   - Navigate to the frontend directory:
