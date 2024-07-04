@@ -9,7 +9,7 @@ To get started with the Next.js Recipe App, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/SofiaA007/react-node-recipe-app.git
+   git clone [https://github.com/SofiaA007/react-node-recipe-app.git](https://github.com/soyfulislamibm/Recipe_app.git)
    cd foodie_app
    ```
 
