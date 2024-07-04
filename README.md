@@ -23,7 +23,7 @@ To get started with the Next.js Recipe App, follow these steps:
 
 2. **Install packages**
     ```bash
-    cd foodie_app
+    cd Recipe_app
     npm install
     ```
   - Create .env file:
@@ -36,7 +36,7 @@ To get started with the Next.js Recipe App, follow these steps:
 3. **Running the Frontend**:
   - Navigate to the frontend directory:
     ```bash
-    cd foodie_app
+    cd Recipe_app
     ```
   - Start the frontend development server:
     ```bash
