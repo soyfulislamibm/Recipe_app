@@ -10,7 +10,6 @@ To get started with the Next.js Recipe App, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/soyfulislamibm/Recipe_app.git
-   cd foodie_app
    ```
 
 2. **Install packages**
@@ -24,13 +23,17 @@ To get started with the Next.js Recipe App, follow these steps:
 - Spoonacular API:
   - Add the api key to the `API_KEY` variable in the `.env` file
 
-3. **Run application locally**
-
-```bash
+3. **Setting up the Frontend**:
+  - Navigate to the frontend directory:
+    ```bash
+    cd foodie_app
+    ```
+  - Start the frontend development server:
+    ```bash
     npm run dev
     ```
 
-4. **Run application locally**
+4. **Run Cypress test**
  - Navigate to the root directory:
  - Install cypress:
      ```bash
