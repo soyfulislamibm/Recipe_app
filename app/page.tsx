@@ -1,13 +1,10 @@
 import CustomFilter from '@/components/CustomFilter';
 import Hero from '@/components/Hero';
 import { MyCard } from '@/components/MyCard';
-import RecipeCard from '@/components/RecipeCard';
 import SearchBar from '@/components/SearchBar';
 import { getRecipes } from '@/utils';
-
 export default async function Home() {
   const allRecipes = await getRecipes();
-
   const isDataEmpty =
     !Array.isArray(allRecipes) || allRecipes.length < 1 || !allRecipes;
 
@@ -22,8 +19,8 @@ export default async function Home() {
         <div className='home__filters'>
           <SearchBar />
           <div className='home__filter-container'>
-            <CustomFilter title='Vegetarian' />
-            <CustomFilter title='Vegan' />
+            {/* <CustomFilter title='Vegetarian' />
+            <CustomFilter title='Vegan' /> */}
           </div>
         </div>
         {!isDataEmpty ? (

@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import SearchCuisine from './SearchCuisine';
 import { useRouter } from 'next/navigation';
+import Popover from './Popover';
+import { useFavoritesStore } from '@/app/store';
+import ButtonModal from './AddNewRecipe';
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
@@ -20,6 +23,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
 const SearchBar = () => {
   const [cuisine, setCuisine] = useState('');
   const [model, setModal] = useState('');
+  const usersFavs = useFavoritesStore((state) => state.favorites)
   const router = useRouter();
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
@@ -54,6 +58,7 @@ const SearchBar = () => {
   };
 
   return (
+    <>
     <form className='searchbar' onSubmit={handleSearch}>
       <div className='searchbar__item'>
         <SearchCuisine cuisine={cuisine} setCuisine={setCuisine} />
@@ -79,6 +84,9 @@ const SearchBar = () => {
       </div>
       <SearchButton otherClasses='max-sm:hidden' />
     </form>
+    <Popover favorites={usersFavs}/>
+    <ButtonModal/>
+    </>
   );
 };
 

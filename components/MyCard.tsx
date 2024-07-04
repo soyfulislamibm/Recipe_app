@@ -1,6 +1,5 @@
 'use client';
 // import { Box, Card, CardContent, CardMedia, IconButton, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -15,6 +14,8 @@ import { CardActions, Button, Tooltip } from '@mui/material';
 import Image from 'next/image';
 import { truncate } from '@/utils';
 import Like from './Like';
+import { useFavoritesStore } from '@/app/store';
+import parse from 'html-react-parser';
 
 interface RecipeCardProps {
   recipe: RecipeProps;
@@ -35,6 +36,10 @@ export const MyCard = ({ recipe }: RecipeCardProps) => {
   const shortSummary = truncate(recipe.summary, 200);
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const updateFavouties = useFavoritesStore((state) =>  state.updateFavorites)
+
+ 
 
   const checkCookingTime = () => {
     if(readyInMinutes) {
@@ -86,7 +91,7 @@ export const MyCard = ({ recipe }: RecipeCardProps) => {
           )}
           <p className='text-[14px]'>{glutenFree && 'Gluten Free'}</p>
         </CardActions>
-        <Like onClick={() => console.log(title)} />
+         <Like onClick={() => updateFavouties(title)} />
       </Box>
       <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flexGrow: 1 }}>
@@ -94,12 +99,11 @@ export const MyCard = ({ recipe }: RecipeCardProps) => {
             {recipe.title}
           </Typography>
           <Typography
-            variant='body2'
-            color='text.secondary'
-            dangerouslySetInnerHTML={{ __html: shortSummary }}
-          >
-            {/* {shortSummary} */}
-          </Typography>
+      variant='body2'
+      color='text.secondary'
+    >
+      {parse(shortSummary)}
+    </Typography>
         </CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', padding: '0 16px 16px 16px' }}>
           <Button variant='outlined' onClick={() => setIsOpen(true)}>
