@@ -13,7 +13,7 @@ const Hero = () => {
         <p className='hero__subtitle'>Just search for a recipe effortlessly.</p>
         <CustomButton
           title={'Search Recipes'}
-          containerStyles='bg-primary-blue text-white rounded-full mt-10'
+          containerStyles='bg-primary-blue text-white rounded-full mt-10 cta-button'
           handleClick={handleScroll}
         />
       </div>

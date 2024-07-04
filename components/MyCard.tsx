@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { RecipeProps } from '@/Types';
 import CustomButton from './CustomButton';
@@ -50,11 +49,12 @@ export const MyCard = ({ recipe }: RecipeCardProps) => {
   }
 
   return (
-    <Card key={title} sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} className=''>
+    <Card key={title} sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} className='recipe-card'>
       <CardMedia
         sx={{ height: 140 }}
         image={recipe.image}
-        title='recipe image'
+        title='recipe-image'
+        className='recipe-image'
       />
       <Box sx={{ display: 'flex', justifyContent: 'space-between', padding: '8px 16px', alignItems: 'center' }}>
         <CardActions sx={{ padding: 0 }}>

@@ -38,7 +38,7 @@ export default function BasicPopover({ favorites} : Props) {
         }}
       >
         {favorites.length === 0 && <p>No favorites</p>}
-        {favorites.map(fav =>  <Typography sx={{ p: 2 }}>{fav}<FaHeart size={20} color='red'/></Typography> )}
+        {favorites.map(fav =>  <Typography key={fav} sx={{ p: 2 }}>{fav}<FaHeart size={20} color='red'/></Typography> )}
       </Popover>
     </div>
   );
