@@ -8,7 +8,9 @@ The Next.js Recipe App is a modern web application designed to provide a compreh
 ## [Tansack](https://tanstack.com/query/latest)
 ## [Zustand](https://zustand-demo.pmnd.rs/)
 
-
+### Prerequisites:
+- Node.js 18.17.0
+- A [Spoonacular API key](https://spoonacular.com/food-api) for the recipe API
 
 ## Getting Started
 
