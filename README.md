@@ -3,9 +3,11 @@
 Description
 The Next.js Recipe App is a modern web application designed to provide a comprehensive collection of recipes using data sourced from the Spoonacular API. This app is built with Vite, a fast build tool, and Next.js, which offers robust server-side and client-side rendering capabilities. It leverages TanStack Query for efficient data fetching, Zustand for state management, and utilizes Material UI and Tailwind CSS to create a responsive, visually appealing, and user-friendly interface. Additionally, the app undergoes rigorous testing with Cypress for end-to-end testing and Vitest for unit tests to ensure a high-quality user experience across all devices.
 
-[Vite](https://vitejs.dev/)
-[Next.js](https://nextjs.org/)
-[Tansack](https://tanstack.com/query/latest)
+## [Vite](https://vitejs.dev/)
+## [Next.js](https://nextjs.org/)
+## [Tansack](https://tanstack.com/query/latest)
+## [Zustand](https://zustand-demo.pmnd.rs/)
+
 
 
 ## Getting Started
