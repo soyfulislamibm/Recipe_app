@@ -14,8 +14,6 @@ To get started with the Next.js Recipe App, follow these steps:
    ```
 
 2. **Install packages**
-    ```
-  - Install the necessary packages:
     ```bash
     npm install
     ```
